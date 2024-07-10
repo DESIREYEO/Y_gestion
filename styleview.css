@@ -1,0 +1,115 @@
+.recent-orders {
+    margin-top: 4rem;
+    padding: 0 1rem; /* Ajout de padding pour les petits écrans */
+}
+
+.recent-orders .ro-title {
+    display: flex;
+    flex-direction: column; /* Changer en colonne pour les petits écrans */
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.recent-orders .ro-title a {
+    font-size: 16px;
+    font-weight: 600;
+    transition: 0.3s ease-in;
+    padding-right: 28px;
+    margin-top: 0.5rem; /* Espace entre les éléments sur les petits écrans */
+}
+
+.recent-orders .ro-title a:hover {
+    color: var(--fuscha);
+}
+
+.table-container {
+    width: 100%;
+    overflow-x: auto; /* Enable horizontal scrolling */
+}
+
+.recent-orders table {
+    width: 100%;
+    min-width: 600px; /* Set a minimum width to enable scrolling on small screens */
+    background-color: var(--white);
+    padding: var(--padding-card);
+    border-radius: var(--border-radius-card);
+    box-shadow: var(--box-shadow-card);
+    text-align: center;
+    transition: box-shadow 0.33s ease-in-out;
+    border-spacing: 0;
+}
+
+.recent-orders table:hover {
+    box-shadow: var(--box-shadow-card-2);
+}
+
+.recent-orders tbody td,
+.recent-orders thead th {
+    padding: 12px 24px;
+}
+
+.recent-orders table tbody tr {
+    border: 1px solid transparent;
+    border-bottom-color: var(--desaturate-cyan);
+    transition: 0.15s ease-in;
+}
+
+.recent-orders tbody tr:last-child {
+    border-bottom-color: transparent;
+}
+
+.recent-orders tbody tr:first-child {
+    border-top-color: var(--desaturate-cyan);
+}
+
+.recent-orders table tbody tr:nth-child(2n + 1) {
+    background-color: var(--desaturate-fuscha-2);
+}
+
+.recent-orders tbody tr:hover {
+    background-color: var(--desaturate-cyan-2) !important;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .recent-orders .ro-title {
+        flex-direction: column; /* Stack items vertically */
+        align-items: flex-start;
+    }
+    .recent-orders .ro-title a {
+        padding-right: 0;
+        margin-top: 0.5rem;
+    }
+    .recent-orders tbody td,
+    .recent-orders thead th {
+        padding: 8px 12px; /* Reduce padding for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .recent-orders {
+        margin-top: 2rem;
+        padding: 0 0.5rem; /* More padding for very small screens */
+    }
+    .recent-orders .ro-title {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .recent-orders .ro-title a {
+        font-size: 14px;
+    }
+    .recent-orders tbody td,
+    .recent-orders thead th {
+        padding: 6px 8px; /* Further reduce padding for very small screens */
+        font-size: 12px; /* Reduce font size for very small screens */
+    }
+    .table-container {
+        overflow-x: scroll; /* Ensure horizontal scrolling */
+    }
+    .recent-orders table {
+        min-width: 500px; /* Ensure minimum width to trigger horizontal scrolling */
+    }
+}

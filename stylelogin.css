@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css?family=Lobster');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(247, 246, 246);
+    background-size: cover;
+    background-position: center;
+    font-family: sans-serif;
+    background-image: url('https://www.screensoft-affichage-dynamique.com/images/screensoft/slideshow-home/fond.jpg');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+header {
+    background: linear-gradient(45deg, rgb(16, 137, 211) 0%, rgb(18, 177, 209) 100%);
+    color: white;
+    padding: 8px 20px 6px 40px;
+    height: 80px;
+}
+
+header h1 {
+    display: inline;
+    font-family: 'Lobster', cursive;
+    font-weight: 400;
+    font-size: 32px;
+    float: left;
+    margin-top: 10px;
+    margin-right: 10px;
+    color: white;
+}
+
+nav ul {
+    display: inline;
+    padding: 10px;
+    float: right;
+}
+
+nav ul li {
+    display: inline-block;
+    list-style-type: none;
+    color: white;
+    float: left;
+    margin-left: 12px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    margin: 30px;
+}
+
+nav ul ul {
+    display: none;
+    position: absolute;
+}
+
+#navli ul li ul:hover {
+    visibility: visible;
+    display: block;
+}
+
+#navli {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.loginbox {
+    width: 90%;
+    max-width: 600px;
+    padding: 70px 30px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 40px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    box-shadow: rgba(133, 189, 215, 0.8784313725) 0px 30px 30px -20px;
+    margin: 20px;
+    box-sizing: border-box;
+}
+
+h1 {
+    text-align: center;
+    font-weight: 900;
+    font-size: 30px;
+    background: linear-gradient(to right, blue, white);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.loginbox p {
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.71);
+}
+
+.loginbox input {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.loginbox input[type="email"], input[type="password"] {
+    width: 100%;
+    background: rgba(104, 104, 104, 0.128);
+    border: none;
+    padding: 15px 5px;
+    border-radius: 20px;
+    margin-top: 15px;
+    color: white;
+    outline: none;
+    border: solid 1px white;
+}
+
+.loginbox input[type="submit"] {
+    display: block;
+    width: 100%;
+    font-weight: bold;
+    background: linear-gradient(45deg, rgb(16, 137, 211) 0%, rgb(18, 177, 209) 100%);
+    color: white;
+    padding-block: 15px;
+    margin: 20px auto;
+    border-radius: 20px;
+    border: none;
+    transition: all 0.2s ease-in-out;
+}
+
+.loginbox input[type="submit"]:hover {
+    transform: scale(1.03);
+    box-shadow: rgba(133, 189, 215, 0.8784313725) 0px 23px 10px -20px;
+}
+
+.loginbox input[type="submit"]:active {
+    transform: scale(0.95);
+    box-shadow: rgba(133, 189, 215, 0.8784313725) 0px 15px 10px -10px;
+}
+
+.loginbox a {
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 20px;
+    color: darkgrey;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 24px;
+    }
+    .loginbox {
+        padding: 50px 20px;
+    }
+    .loginbox h1 {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 20px;
+    }
+    .loginbox {
+        padding: 30px 15px;
+    }
+    .loginbox h1 {
+        font-size: 20px;
+    }
+}

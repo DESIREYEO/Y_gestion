@@ -1,0 +1,14 @@
+form{
+    border-radius: 20px;
+}
+
+.title{
+    text-align: center;
+    font-weight: bold;
+}
+
+.p-t-20{
+    justify-content: center;
+    display: flex;
+    border-radius: 5px;
+}
